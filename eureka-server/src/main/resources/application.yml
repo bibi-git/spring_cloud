@@ -1,0 +1,10 @@
+# 服务端口
+server:
+  port: 8761
+
+# eureka.instance.hostname 不设置默认为localhost
+# eureka.client.service-url.defaultZone 默认为http://localhost:8761/eureka/   受容器端口影响
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

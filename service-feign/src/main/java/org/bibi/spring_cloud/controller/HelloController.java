@@ -3,7 +3,6 @@ package org.bibi.spring_cloud.controller;
 import org.bibi.spring_cloud.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,9 +17,9 @@ public class HelloController {
     @Autowired
     private HelloService helloService;
 
-    @GetMapping("/ribbon_hello")
+    @GetMapping("/feign_hello")
     public String hello(@RequestParam String name){
-        return "ribbon " + helloService.hello(name);
+        return "feign " + helloService.hello(name);
     }
 
 }
