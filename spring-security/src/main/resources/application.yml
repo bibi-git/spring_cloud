@@ -1,0 +1,18 @@
+server:
+  port: 8880
+security:
+  user:
+    password: user  # 直接登录时的密码
+  ignored: /
+  sessions: never   # session策略
+  oauth2:
+    sso:
+      loginPath: /login   # 登录路径
+    client:
+      clientId: 6f7128b496d2901ea339
+      clientSecret: e721356a47e224ba581145ab3afd274a1ac9d88a
+      accessTokenUri: https://github.com/login/oauth/access_token
+      userAuthorizationUri: https://github.com/login/oauth/authorize
+    resource:
+      userInfoUri: https://api.github.com/user
+      preferTokenInfo: false
